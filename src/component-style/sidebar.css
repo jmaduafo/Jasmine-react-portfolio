@@ -1,0 +1,103 @@
+.side-nav {
+    position: fixed;
+    margin-top: 15em;
+    padding: 50px;
+}
+
+/* ---------SIDE NAV SOCIAL LINKS--------- */
+
+.nav-socials {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    text-align: center;
+}
+
+.nav-socials p {
+    font-family: "Cormorant", serif;
+    font-weight: 400;
+    transition: all .4s ease;
+}
+
+.social-nav {
+    position: relative;
+    cursor: pointer;
+}
+
+.social-nav a {
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.social-nav i {
+    color: var(--esther-text);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dot {
+    width: 4px;
+    height: 4px;
+    background-color: var(--esther-details);
+    border-radius: 50%;
+}
+
+.github-nav:hover p, .instagram-nav:hover p, .linkedin-nav:hover p {
+    opacity: 0;
+}
+
+.github-nav:hover a, .instagram-nav:hover a, .linkedin-nav:hover a {
+    opacity: 1;
+}
+
+/* ---------SIDE NAV COLOR THEME----------- */
+
+.nav-color-theme {
+    margin-top: 10em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    cursor: pointer;
+    transition: all .4s ease;
+}
+
+.nav-theme {
+    width: 20px;
+    height: 20px;
+    border: 1px solid white;
+    border-radius: 50%;
+    position: relative;
+}
+
+.esther-color {
+    background-color: var(--esther-text);
+}
+
+.maple-color {
+    background-color: #843B1D;
+}
+
+.theme-text {
+    position: absolute;
+    left: 280%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, .25);
+    backdrop-filter: blur(4px);
+    -webkit-backdrop-filter: blur(4px);
+    padding: 2px 8px;
+    border-radius: 40px;
+    opacity: 0;
+    transition: all .4s ease;
+}
+
+.theme-text p {
+    font-size: 12px;
+}
+
+.esther-color:hover .theme-text, .maple-color:hover .theme-text {
+    opacity: 1;
+} 

@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
+import "./App.css"
+import Home from "./pages/Home"
+import About from "./pages/About"
+import Works from "./pages/Works"
+import Contact from "./pages/Contact"
+import Header from "./components/Header"
+import SideBar from "./components/SideBar"
+import { createContext, useState } from "react";
+
+export const ThemeContext = createContext(null);
 
 function App() {
+  const [theme, setTheme] = useState("esther");
+
+    function toggleTheme() {
+        setTheme((curr) => curr === "esther" ? "maple" : "esther")
+    }
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Router>
+      <div className="container">
+        <Header/>
+        <SideBar/>
+        <Routes>
+          <Route exact path="/" Component={Home} />
+          <Route path="/about" Component={About} />
+          <Route path="/works" Component={Works} />
+          <Route path="/contact" Component={Contact} />  
+        </Routes>   
+      </div>
+    </Router>
   );
 }
 
