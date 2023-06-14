@@ -1,33 +1,60 @@
 import React from 'react';
 import TopIntro from '../components/TopIntro';
+import HomeTransition from '../components/HomeTransition';
+import PortfolioCarousel from '../components/PortfolioCarousel';
+import HomeProjects from '../components/HomeProjects';
+import { Link } from "react-router-dom";
 
 const Home = () => {
   return (
-    <div className="home-hero">
-        <TopIntro/>
-        <div className='main-title home-title'>
-          <h1>Jasmine</h1>
-        </div>
-        <div className='bottom-hero'>
-          <div className='hero-text-scroll'>
-            <div className='hero-text'>
-              <p>I’m <span className='jasmine-fancy'>Jasmine Maduafokwa</span>, a self-taught full stack developer with a deep passion for design and learning. I'm an innovative thinker seeking to use my mathematics background and design sense to create fully-functioning, eye-catching websites and apps created both independently and in team-based workspaces.</p>
+    <>
+    <div className='main-container'>
+    <section>
+      <div className="home-hero">
+          <TopIntro/>
+          <div className='main-title home-title'>
+            <div className='first-name'>
+            <h1>Jasmine</h1>
             </div>
-            <div className='hero-scroll'>
-              <i className='bx bx-down-arrow-alt bx-sm'></i>
-              <p>Scroll Down</p>
+            <div className='last-name'>
+              <p>Maduafokwa</p>
             </div>
           </div>
-          <div className='get-in-touch'>
-            <div className='in-touch-text'>
-              <h3>Let's get in touch</h3>
+          <div className='bottom-hero'>
+            <div className='hero-text-scroll'>
+              <div className='hero-text'>
+                <p>I’m <span className='jasmine-fancy'>Jasmine Maduafokwa</span>, a self-taught full stack developer with a deep passion for design and learning. I'm an innovative thinker seeking to use my mathematics background and design sense to create fully-functioning, eye-catching websites and apps created both independently and in team-based workspaces.</p>
+              </div>
+              <div className='hero-scroll'>
+                <i className='bx bx-down-arrow-alt bx-sm'></i>
+                <p>Scroll Down</p>
+              </div>
             </div>
-            <div className='in-touch-button'>
-              <i className='bx bx-arrow-back bx-lg' ></i>
+            <div className='get-in-touch'>
+              <div className='in-touch-text'>
+                <Link to="/contact" style={{"textDecoration": "none", "color": "#515E3D"}}><h3>Let's get in touch</h3></Link>
+              </div>
+              <div className='in-touch-button'>
+                <i className='bx bx-arrow-back bx-lg' ></i>
+              </div>
             </div>
           </div>
-        </div>
+      </div>
+    </section>
+    <section>
+      <HomeTransition />
+    </section>
+    <section>
+      <PortfolioCarousel />
+    </section>
+    <section>
+      <HomeProjects />
+    </section>
+    <section>
+
+    </section>
     </div>
+    </>
   )
 }
 

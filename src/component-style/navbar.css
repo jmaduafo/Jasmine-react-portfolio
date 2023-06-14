@@ -12,7 +12,7 @@
 }
 
 .nav-logo span:hover {
-    letter-spacing: -8px;
+    letter-spacing: -7px;
 }
 
 .nav-bar ul {
@@ -35,7 +35,7 @@
     top: 100%;
     width: 0%;
     height: 2px;
-    background-color: var(--esther-text);
+    background-color: var(--esther-button);
     transition: all .4s ease;
 }
 

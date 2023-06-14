@@ -21,12 +21,14 @@ function App() {
       <div className="container">
         <Header/>
         <SideBar/>
+        <main>
         <Routes>
           <Route exact path="/" Component={Home} />
           <Route path="/about" Component={About} />
           <Route path="/works" Component={Works} />
           <Route path="/contact" Component={Contact} />  
-        </Routes>   
+        </Routes> 
+        </main>  
       </div>
     </Router>
   );

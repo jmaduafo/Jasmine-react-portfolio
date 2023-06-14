@@ -1,0 +1,31 @@
+.portfolio-carousel {
+    border-top: 1px solid var(--esther-text);
+    border-bottom: 1px solid var(--esther-text);
+    padding: 20px 0;
+    
+}
+
+.portfolio-text {
+    overflow: hidden;
+    display: flex;
+    flex-wrap: nowrap;
+    width: 400%;
+    animation: shift 50s linear infinite;
+}
+
+.portfolio-text span {
+    font-size: 1.1rem;
+    display: inline-block;
+    margin-left: 20px;
+    font-family: "Cormorant", serif;
+}
+
+@keyframes shift {
+    from {
+        transform: translateX(0);
+    }
+    to {
+        transform: translateX(-50%);
+    }
+}
+

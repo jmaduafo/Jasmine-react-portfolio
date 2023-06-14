@@ -1,3 +1,4 @@
+/* ---------HERO INTRO SECTION---------- */
 .home-hero {
     width: 100vw;
     display: flex;
@@ -6,32 +7,25 @@
     align-items: center;
 }
 
-.home-geometry-image {
-    width: 200px;
-    object-fit: cover;
-    margin-top: 6em;
-    animation: pump 3s ease-in-out infinite alternate;
+.home-title {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
 }
 
-.home-geometry-image img {
-    width: 100%;
-    height: 100%;
+.home-title h1 {
+    margin-bottom: -8rem;
 }
 
-@keyframes pump {
-    from {
-        transform: scale(1);
-    }
-    to {
-        transform: scale(.9);
-    }
+.home-title p {
+    font-size: 7em;
 }
 
 .bottom-hero {
     display: flex;
     justify-content: space-between;
-    margin-left: 10em;
-    margin-right: 5em;
+    margin-left: 10%;
+    margin-right: 7%;
     min-height: 12em;
 }
 
@@ -99,4 +93,118 @@
 
 .in-touch-button i {
     transform: rotate(135deg);
+}
+
+/* ----------HOME TRANSITION---------- */
+/* ----HOME IMAGES---- */
+.home-transition {
+    padding: 10em 0;
+    position: relative;
+}
+
+.home-images {
+    display: flex;
+    justify-content: center;
+    gap: 8em;
+}
+
+.home-images .image-container {
+    object-fit: cover;
+}
+
+.home-images .image-container img {
+    width: 100%;
+    height: 100%;
+}
+
+.home-images .img-container1 {
+    width: 490px;
+    height: 450px;
+}
+
+.home-images .img-container2 {
+    width: 550px;
+    margin-top: 10em;
+}
+
+/* ----HOME ABOUT INFO---- */
+.home-about {
+    color: white;
+    position: absolute;
+    top: 67%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 55em;
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+}
+
+.title-i-am h3, .specialty-titles span {
+    font-family: "Cormorant", serif;
+    font-style: italic;
+    font-weight: 400;
+    font-size: 8em;
+    line-height: .8em;
+    letter-spacing: -6px;
+}
+
+.specialty-titles span {
+    position: absolute;
+    opacity: 0;
+    animation: appear 9s ease infinite 0s;
+}
+
+.specialty-titles span:nth-child(2) {
+    animation-delay: 3s;
+}
+.specialty-titles span:nth-child(3) {
+    animation-delay: 6s;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 1;
+    }
+    33.3333% {
+        opacity: 0;
+    }
+    66.6666% {
+        opacity: 0;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
+.home-about-text {
+    margin-top: 9em;
+    display: flex;
+    /* justify-content: right; */
+    margin-left: 8em;   
+}
+
+.home-about-text p {
+    width: 55%;
+    text-indent: 10%;
+}
+
+.home-about-images-container {
+    display: flex;
+    justify-content: center;
+}
+
+.home-about-image {
+    width: 240px;
+    object-fit: cover;
+    margin-left: 5em;
+    margin-top: 9em;
+}
+
+.home-about-image img {
+    width: 100%;
+    height: 100%;
+    animation: spin 15s linear infinite;
+       
 }
