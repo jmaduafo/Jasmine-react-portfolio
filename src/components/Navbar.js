@@ -2,6 +2,7 @@ import React from 'react'
 import { Link } from "react-router-dom";
 import "../component-style/navbar.css"
 import styled from "styled-components";
+import Resume from "../utils/Jasmine's Resume.pdf"
 
 const Navbar = () => {
     const NavStyle = styled(Link) `
@@ -19,7 +20,7 @@ const Navbar = () => {
                     <li><NavStyle to="/about">about</NavStyle></li>
                     <li><NavStyle to="/works">works</NavStyle></li>
                     <li><NavStyle to="/contact">contact</NavStyle></li>
-                    <button id="resume-button">Resume</button>
+                    <a href={Resume} download><button id="resume-button">Resume</button></a>
                 </ul>
             </div>
         </div>

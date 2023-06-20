@@ -10,7 +10,8 @@ const HomeProjects = () => {
       "description": "pretty woman posing",
       "year": "2023",
       "roles": ["frontend", "backend", "creative direction", "web design"],
-      "image": "../../images/pixie6.jpg"
+      "image": "../../images/pixie6.jpg",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui massa, fermentum eget nisi et, volutpat varius felis. Maecenas molestie purus quis nisl imperdiet, sed tempor dui feugiat."
     },
     {
       "id": 2,
@@ -18,7 +19,8 @@ const HomeProjects = () => {
       "description": "man with vr glasses",
       "year": "2023",
       "roles": ["frontend", "creative direction", "web design"],
-      "image": "../../images/vr-glasses-mobile.jpg"
+      "image": "../../images/vr-glasses-mobile.jpg",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui massa, fermentum eget nisi et, volutpat varius felis. Maecenas molestie purus quis nisl imperdiet, sed tempor dui feugiat."
     },
     {
       "id": 3,
@@ -26,7 +28,8 @@ const HomeProjects = () => {
       "description": "design of mobile blog",
       "year": "2023",
       "roles": ["frontend", "backend", "creative direction", "web design"],
-      "image": ""
+      "image": "",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui massa, fermentum eget nisi et, volutpat varius felis. Maecenas molestie purus quis nisl imperdiet, sed tempor dui feugiat."
     },
     {
       "id": 4,
@@ -34,7 +37,8 @@ const HomeProjects = () => {
       "description": "inspirational musician",
       "year": "2023",
       "roles": ["frontend", "web design"],
-      "image": ""
+      "image": "",
+      "projectDescription": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed dui massa, fermentum eget nisi et, volutpat varius felis. Maecenas molestie purus quis nisl imperdiet, sed tempor dui feugiat."
     },
   ]
 
@@ -44,6 +48,9 @@ const HomeProjects = () => {
         <div className='selected-absolute-title'>
           <div className='selected-title'>
             <h2>{works.title}</h2>
+          </div>
+          <div className='selected-desc'>
+            <p>{works.projectDescription}</p>
           </div>
         </div>
         <div className='selected-image-count'>

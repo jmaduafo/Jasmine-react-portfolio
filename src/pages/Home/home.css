@@ -18,7 +18,32 @@
 }
 
 .home-title p {
-    font-size: 7em;
+    font-size: 4em;
+}
+
+.home-intro-below {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    gap: 20px;
+}
+
+.small-words {
+    flex-basis: 60%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 15px;
+}
+
+.last-name {
+    flex-basis: 40%;
+    text-align: right;
+}
+
+
+.small-words p {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
 }
 
 .bottom-hero {
@@ -98,63 +123,102 @@
 /* ----------HOME TRANSITION---------- */
 /* ----HOME IMAGES---- */
 .home-transition {
-    padding: 10em 0;
+    padding: 15em 0;
     position: relative;
 }
 
 .home-images {
     display: flex;
     justify-content: center;
-    gap: 8em;
+    position: relative;
 }
 
 .home-images .image-container {
     object-fit: cover;
+    
 }
 
 .home-images .image-container img {
     width: 100%;
     height: 100%;
-}
-
-.home-images .img-container1 {
-    width: 490px;
-    height: 450px;
+    
 }
 
 .home-images .img-container2 {
-    width: 550px;
-    margin-top: 10em;
+    width: 40%;
+    z-index: 5;
+}
+
+.home-about-images-container {
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    top: 90%;
+    left: 27%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+}
+
+.home-about-image {
+    width: 240px;
+    object-fit: cover;
+    margin-left: 5em;
+    margin-top: 9em;
+    
+}
+
+.home-about-image img {
+    width: 100%;
+    height: 100%;
+    animation: spin 15s linear infinite;    
 }
 
 /* ----HOME ABOUT INFO---- */
 .home-about {
     color: white;
     position: absolute;
-    top: 67%;
+    top: 40%;
     left: 50%;
     transform: translate(-50%, -50%);
     min-width: 55em;
     display: flex;
     flex-direction: column;
     justify-content: end;
+    z-index: 6;
 }
 
-.title-i-am h3, .specialty-titles span {
+.specialty-titles {
+    display: flex;
+    flex-wrap: nowrap;
+    width: 200%;
+}
+
+.specialty-titles span {
     font-family: "Cormorant", serif;
     font-style: italic;
     font-weight: 400;
-    font-size: 8em;
+    font-size: 10em;
     line-height: .8em;
     letter-spacing: -6px;
 }
 
-.specialty-titles span {
-    position: absolute;
-    opacity: 0;
-    animation: appear 9s ease infinite 0s;
+.specialty-titles span:nth-child(even) {
+    margin: 0 20px;
 }
 
+.home-about .specialty1 {
+    margin-bottom: 2em;
+    transform: translateX(7.5%);
+    position: relative;
+    z-index: -10;
+}
+
+.specialty2 {
+    transform: translateX(-45%);
+}
+
+
+/* 
 .specialty-titles span:nth-child(2) {
     animation-delay: 3s;
 }
@@ -175,7 +239,7 @@
     100% {
         opacity: 1;
     }
-}
+} */
 
 
 .home-about-text {
@@ -190,21 +254,3 @@
     text-indent: 10%;
 }
 
-.home-about-images-container {
-    display: flex;
-    justify-content: center;
-}
-
-.home-about-image {
-    width: 240px;
-    object-fit: cover;
-    margin-left: 5em;
-    margin-top: 9em;
-}
-
-.home-about-image img {
-    width: 100%;
-    height: 100%;
-    animation: spin 15s linear infinite;
-       
-}

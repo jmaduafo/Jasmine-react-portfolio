@@ -6,6 +6,7 @@ import Works from "./pages/Works"
 import Contact from "./pages/Contact"
 import Header from "./components/Header"
 import SideBar from "./components/SideBar"
+import Footer from "./components/Footer"
 import { createContext, useState } from "react";
 
 export const ThemeContext = createContext(null);
@@ -17,20 +18,19 @@ function App() {
         setTheme((curr) => curr === "esther" ? "maple" : "esther")
     }
   return (
-    <Router>
-      <div className="container">
-        <Header/>
-        <SideBar/>
-        <main>
-        <Routes>
-          <Route exact path="/" Component={Home} />
-          <Route path="/about" Component={About} />
-          <Route path="/works" Component={Works} />
-          <Route path="/contact" Component={Contact} />  
-        </Routes> 
-        </main>  
-      </div>
-    </Router>
+    <div className="container">
+      <Header/>
+      <SideBar/>
+      <main>
+      <Routes>
+        <Route exact path="/" Component={Home} />
+        <Route path="/about" Component={About} />
+        <Route path="/works" Component={Works} />
+        <Route path="/contact" Component={Contact} />  
+      </Routes> 
+      </main>
+      <Footer />
+    </div>
   );
 }
 

@@ -1,6 +1,7 @@
 import React from 'react'
 import "./Contact";
 import TopIntro from "../components/TopIntro";
+import ContactForm from "../components/ContactForm";
 
 const Contact = () => {
     
@@ -13,6 +14,9 @@ const Contact = () => {
             <h1>Contact</h1>
           </div>
       </div>
+    </section>
+    <section>
+      <ContactForm/>
     </section>
     </>
   )

@@ -1,0 +1,106 @@
+.contact-section {
+    display: flex;
+    padding: 0 15%;
+    margin: 5em 0;
+}
+
+.pitch-text h2 {
+    line-height: .8em;
+    font-weight: 500;
+    letter-spacing: -6px;
+    font-size: 4.7em;
+    width: 80%;
+    /* font-family: "Cormorant", serif; */
+}
+
+.pitch-offer {
+    width: fit-content;
+    text-align: center;
+    margin-top: 20px;
+}
+.pitch-offer p {
+    border: 2px solid white;
+    padding: 3px 15px;
+    border-radius: 30px;
+    font-weight: 500;
+    letter-spacing: -1px;
+    font-size: 14px;
+}
+
+.contact-pitch, .contact-form {
+    flex-basis: 50%;
+}
+
+
+.contact-me, .contact-enter {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-enter input, .contact-enter textarea {
+    background-color: transparent;
+    border: none;
+    outline: none;
+    border-bottom: 2px solid white;
+    font-family: "Montserrat", sans-serif;
+    letter-spacing: -.7px;
+    font-size: 14px;
+    color: var(--esther-text);
+    padding: 10px 0;
+}
+
+::placeholder {
+    color: var(--esther-text);
+    opacity: .7;
+}
+
+::-moz-placeholder {
+    color: var(--esther-text);
+    opacity: .7;
+}
+
+.contact-enter input {
+    margin-bottom: 1.5rem;
+}
+
+.contact-enter input:focus {
+    background-color: transparent;
+}
+
+.submit-form {
+    margin-top: 20px;
+    width: 40%;
+    align-self: center;
+}
+.submit-button {
+    border: 2px solid var(--esther-button);
+    padding: 3px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.submit-button button {
+    padding: 0 50px 0 0;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    color: var(--esther-text);
+    transition: all .4s ease;
+}
+.submit-button i {
+    transition: all .4s ease;
+}
+
+.submit-button:hover {
+    background-color: white;
+}
+
+.submit-button:hover button, .submit-button:hover i {
+    color: var(--esther-background);
+}
+
+.submit-button:hover i {
+    transform: translateX(5px);
+}

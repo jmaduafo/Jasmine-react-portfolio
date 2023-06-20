@@ -14,16 +14,24 @@ const Home = () => {
           <TopIntro/>
           <div className='main-title home-title'>
             <div className='first-name'>
-            <h1>Jasmine</h1>
+              <h1>Jasmine</h1>
             </div>
-            <div className='last-name'>
-              <p>Maduafokwa</p>
+            <div className='home-intro-below'>
+              <div className='small-words'>
+                <p>Deliberate</p>
+                <p>Innovative</p>
+                <p>Empathetic</p>
+              </div>
+              <div className='last-name'>
+                <p>Web Developer</p>
+              </div>
             </div>
+            
           </div>
           <div className='bottom-hero'>
             <div className='hero-text-scroll'>
               <div className='hero-text'>
-                <p>I’m <span className='jasmine-fancy'>Jasmine Maduafokwa</span>, a self-taught full stack developer with a deep passion for design and learning. I'm an innovative thinker seeking to use my mathematics background and design sense to create fully-functioning, eye-catching websites and apps created both independently and in team-based workspaces.</p>
+                <p>I’m <span className='jasmine-fancy'>Jasmine Maduafokwa</span>, a self-taught full stack developer with a deep passion for design and learning. I'm an innovative thinker seeking to use my mathematics background and design sense to build fully-functioning, eye-catching websites created both independently and in team-based workspaces.</p>
               </div>
               <div className='hero-scroll'>
                 <i className='bx bx-down-arrow-alt bx-sm'></i>
@@ -49,9 +57,6 @@ const Home = () => {
     </section>
     <section>
       <HomeProjects />
-    </section>
-    <section>
-
     </section>
     </div>
     </>
