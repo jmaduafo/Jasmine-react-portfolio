@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import "../component-style/navbar.css"
 import styled from "styled-components";
 import Resume from "../utils/Jasmine's Resume.pdf"
+import { motion } from 'framer-motion';
 
 const Navbar = () => {
     const NavStyle = styled(Link) `

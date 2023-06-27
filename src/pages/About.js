@@ -1,19 +1,35 @@
 import React from 'react';
 import "./About";
 import TopIntro from "../components/TopIntro";
+import FooterIntro from '../components/FooterIntro';
 import "../pages/About/about.css";
 import { LazyLoadImage } from 'react-lazy-load-image-component';
-
+import { motion } from 'framer-motion';
 
 const About = () => {
-    
+  const spanArise = {
+    start: {
+      y: "100%"
+    },
+    end: {
+      y: "0%",
+      staggerChildren: .6,
+      ease: "easeInOut",
+      transition: {
+        duration: 1,
+        delay: .4,
+        when: "beforeChildren"
+      }
+    }
+  }
+  const transitionEase = {duration: 1, ease: [0.43, .13, .23, 0.96]}
   return (
     <>
     <section>
       <div className="home-hero">
           <TopIntro/>
           <div className='main-title about-title'>
-            <h1>About</h1>
+            <motion.h1 variants={spanArise} initial="start" animate="end" transition={transitionEase}>About</motion.h1>
           </div>
           <div className='about-hero-image-text'>
             <div className='about-hero-image'>
@@ -29,6 +45,9 @@ const About = () => {
             </div>
           </div>
       </div>
+    </section>
+    <section>
+      <FooterIntro/>
     </section>
     </>
   )

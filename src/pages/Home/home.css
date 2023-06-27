@@ -13,10 +13,6 @@
     align-items: flex-end;
 }
 
-.home-title h1 {
-    margin-bottom: -8rem;
-}
-
 .home-title p {
     font-size: 4em;
 }
@@ -33,13 +29,17 @@
     display: flex;
     justify-content: space-between;
     margin-top: 15px;
+    overflow: hidden;
+}
+
+.first-name, .last-name {
+    overflow: hidden;
 }
 
 .last-name {
     flex-basis: 40%;
     text-align: right;
 }
-
 
 .small-words p {
     font-family: "Montserrat", sans-serif;
@@ -51,11 +51,14 @@
     justify-content: space-between;
     margin-left: 10%;
     margin-right: 7%;
+    margin-top: 2em;
     min-height: 12em;
 }
 
 .hero-text-scroll {
     width: 40%;
+    opacity: 0;
+    animation: appear .7s ease forwards 1.5s;
 }
 
 .hero-text p {
@@ -80,6 +83,8 @@
 .get-in-touch {
     position: relative;
     align-self: flex-end;
+    opacity: 0;
+    animation: appear .7s ease forwards 1.8s;
 }
 
 .in-touch-text {
@@ -135,13 +140,12 @@
 
 .home-images .image-container {
     object-fit: cover;
-    
+    overflow: hidden;    
 }
 
 .home-images .image-container img {
     width: 100%;
     height: 100%;
-    
 }
 
 .home-images .img-container2 {
@@ -187,6 +191,20 @@
     z-index: 6;
 }
 
+.home-about-title {
+    animation: reveal 3s ease forwards;
+    opacity: 0;
+}
+
+@keyframes reveal {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
 .specialty-titles {
     display: flex;
     flex-wrap: nowrap;
@@ -208,14 +226,13 @@
 
 .home-about .specialty1 {
     margin-bottom: 2em;
-    transform: translateX(7.5%);
     position: relative;
     z-index: -10;
 }
 
-.specialty2 {
+/* .specialty2 {
     transform: translateX(-45%);
-}
+} */
 
 
 /* 

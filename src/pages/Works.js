@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Works";
 import TopIntro from "../components/TopIntro";
+import FooterIntro from '../components/FooterIntro';
 
 
 const Works = () => {
@@ -13,6 +14,9 @@ const Works = () => {
             <h1>Works</h1>
           </div>
       </div>
+    </section>
+    <section>
+      <FooterIntro/>
     </section>
     </>
   )

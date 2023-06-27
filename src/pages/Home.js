@@ -1,29 +1,63 @@
-import React from 'react';
+import React, {useRef} from 'react';
 import TopIntro from '../components/TopIntro';
 import HomeTransition from '../components/HomeTransition';
 import PortfolioCarousel from '../components/PortfolioCarousel';
 import HomeProjects from '../components/HomeProjects';
+import FooterIntro from '../components/FooterIntro';
 import { Link } from "react-router-dom";
+import { motion, stagger, useScroll, useTransform } from 'framer-motion';
 
 const Home = () => {
+  const spanArise = {
+    start: {
+      y: "100%"
+    },
+    end: {
+      y: "0%",
+      staggerChildren: .6,
+      ease: "easeInOut",
+      transition: {
+        duration: 1,
+        delay: .4,
+        when: "beforeChildren"
+      }
+    }
+  }
+
+  const homeTarget = useRef(null);
+
+  const { scrollYProgress } = useScroll({
+    target: homeTarget,
+    offset: ["start end", "end start"]
+  })
+
+  const transitionEase = {duration: 1, ease: [0.43, .13, .23, 0.96]}
+
+  const fade = useTransform(scrollYProgress, [0.6, 1], [1, .2]);
+  const change = useTransform(scrollYProgress, [0.6, 1], [0, -100]);
+  const squeeze = useTransform(scrollYProgress, [0.6, 1], [1, 0.9])
+
   return (
     <>
     <div className='main-container'>
     <section>
-      <div className="home-hero">
+      <motion.div className="home-hero" ref={homeTarget} style={{opacity: fade, translateY: change}}>
           <TopIntro/>
           <div className='main-title home-title'>
             <div className='first-name'>
-              <h1>Jasmine</h1>
+              <motion.h1  variants={spanArise} initial="start" animate="end" transition={transitionEase}>{["J", "A", "S", "M", "I", "N", "E"].map((letters, index) => {
+                return (<span key={index}>{letters}</span>)
+              })}</motion.h1>
             </div>
             <div className='home-intro-below'>
-              <div className='small-words'>
-                <p>Deliberate</p>
-                <p>Innovative</p>
-                <p>Empathetic</p>
-              </div>
+              <motion.div className='small-words' initial={{opacity: 0}} animate={{opacity: 1, ease: "easeInOut", transition: {duration: 1, when: "beforeChildren"}}} transition={transitionEase}>
+                {["Based in the U.S.", "Available for remote work"].map((words, index) => {
+                  return (<motion.p key={index} initial={{y: "-100%", opacity: 0}} animate={{y: "0%", opacity: 1, ease: "easeInOut", staggerChildren: 1, transition: {duration: 1, delay: index === 0 ? 1.2 : 1.45}}} transition={transitionEase}>{words}</motion.p>)
+                })}
+                
+              </motion.div>
               <div className='last-name'>
-                <p>Web Developer</p>
+                <motion.p initial={{y: "100%"}} animate={{y: "0%", ease: "ease", transition: {duration: 1, delay: 1}}}>Web Developer</motion.p>
               </div>
             </div>
             
@@ -47,7 +81,7 @@ const Home = () => {
               </div>
             </div>
           </div>
-      </div>
+      </motion.div>
     </section>
     <section>
       <HomeTransition />
@@ -57,6 +91,9 @@ const Home = () => {
     </section>
     <section>
       <HomeProjects />
+    </section>
+    <section>
+      <FooterIntro/>
     </section>
     </div>
     </>

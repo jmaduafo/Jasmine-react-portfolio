@@ -1,9 +1,10 @@
 import React from 'react'
 import "../component-style/sidebar.css"
+import { motion } from 'framer-motion'
 
 const SideBar = () => {
   return (
-    <div className='side-nav'>
+    <motion.div className='side-nav' initial={{opacity: 0}} animate={{opacity: 1, transition: {duration: 1, delay: 1.2}}}>
         <div className='nav-socials'>
             <div className='social-nav github-nav'>
                 <p>GH</p>
@@ -35,7 +36,7 @@ const SideBar = () => {
 
     
         
-    </div>
+    </motion.div>
   )
 }
 

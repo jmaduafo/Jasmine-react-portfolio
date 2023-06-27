@@ -1,11 +1,12 @@
 import React from 'react';
 import Navbar from './Navbar';
+import { motion } from 'framer-motion';
 
 const Header = () => {
   return (
-    <header>
+    <motion.header initial={{y: -100}} animate={{y: 0, ease: "easeIn", transition: {duration: 1.3}}}>
       <Navbar/>
-    </header>
+    </motion.header>
   )
 }
 

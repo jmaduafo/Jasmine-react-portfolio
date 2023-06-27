@@ -9,7 +9,7 @@ const ContactForm = () => {
                 <h2>Let's make something amazing!</h2>
             </div>
             <div className='pitch-offer'>
-                <p>Looking for remote work</p>
+                <p>Currently available for remote work</p>
             </div>
         </div>
         <div className='contact-form'>
@@ -22,7 +22,7 @@ const ContactForm = () => {
                 <div className='submit-form'>
                     <div className='submit-button'>
                         <button id='contact-submit'>SUBMIT</button>
-                        <i class='bx bx-right-arrow-alt bx-sm'></i>
+                        <i className='bx bx-right-arrow-alt bx-sm'></i>
                     </div> 
                 </div>
             </form>

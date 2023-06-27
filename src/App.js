@@ -8,6 +8,7 @@ import Header from "./components/Header"
 import SideBar from "./components/SideBar"
 import Footer from "./components/Footer"
 import { createContext, useState } from "react";
+import SmoothScroll from "./components/SmoothScroll";
 
 export const ThemeContext = createContext(null);
 
@@ -19,8 +20,10 @@ function App() {
     }
   return (
     <div className="container">
+      
       <Header/>
       <SideBar/>
+      
       <main>
       <Routes>
         <Route exact path="/" Component={Home} />

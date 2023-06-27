@@ -1,3 +1,27 @@
+.footer-intro-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 6em;
+}
+
+.footer-intro-text {
+    margin-bottom: -20px;
+}
+
+.footer-intro-text h2 {
+    font-size: 8rem;
+    text-align: center;
+    font-family: "Dialogist Personal Use", serif;
+    font-weight: lighter;
+    text-transform: uppercase;
+}
+
+.footer-intro-text h2:first-child {
+    margin-bottom: -.4em
+}
+
 .footer-links {
     margin-bottom: 2em;
 }

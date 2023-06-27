@@ -1,7 +1,8 @@
 import React from 'react'
-import "./Contact";
+import "./Contact/contact.css";
 import TopIntro from "../components/TopIntro";
 import ContactForm from "../components/ContactForm";
+import ContactCarousel from '../components/ContactCarousel';
 
 const Contact = () => {
     
@@ -14,6 +15,9 @@ const Contact = () => {
             <h1>Contact</h1>
           </div>
       </div>
+    </section>
+    <section>
+      <ContactCarousel/>
     </section>
     <section>
       <ContactForm/>
