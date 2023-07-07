@@ -1,19 +1,45 @@
-import React from 'react'
+import React, { useRef, useEffect } from 'react'
 import "../component-style/contact-form.css"
+import { motion } from 'framer-motion'
+import { useScroll, useTransform, useInView } from 'framer-motion'
 
 const ContactForm = () => {
+    
+    const ascend = useRef(null);
+
+    const { scrollYProgress } = useScroll({
+        target: ascend,
+        offset: ['start end', 'end start']
+    })
+
+    const isInView = useInView(ascend, { once: true })
+
+    const contactMe = useRef(null);
+    const contactEmail = useRef(null);
+    const contactMessage = useRef(null);
+
+    const emailRegex = /^([a-z0-9_\.-]+)@([\da-z\.-]+)\.([a-z\.]{2,6})$/
+    // Email API
+
+
+    function sendEmail() {
+
+    }
+   
+
+
   return (
-    <div className='contact-section'>
+    <div className='contact-section' ref={ascend}>
         <div className='contact-pitch'>
             <div className='pitch-text'>
-                <h2>Let's make something amazing!</h2>
+                <motion.h2 initial={{ y: 200 }} animate={{ y: 0, ease: 'easeInOut', transition: { duration: 2 }}}>Let's make something amazing!</motion.h2>
             </div>
-            <div className='pitch-offer'>
+            <motion.div className='pitch-offer' initial={{ opacity: 0 }} animate={{ opacity: 1, ease: 'easeInOut', transition:{duration: 2, delay: 3}}}>
                 <p>Currently available for remote work</p>
-            </div>
+            </motion.div>
         </div>
-        <div className='contact-form'>
-            <form className='contact-me'>
+        <motion.div className='contact-form' initial={{ opacity: 0 }} animate={{ opacity: 1, ease: 'easeInOut', transition:{duration: 2, delay: 1.2}}}>
+            <form className='contact-me' ref={ contactMe } onsubmit={ sendEmail }>
                 <div className='contact-enter'>
                     <input type='text' id='contact-name' placeholder='Name'/>
                     <input type='email' id='contact-email' placeholder='Email'/>
@@ -26,7 +52,7 @@ const ContactForm = () => {
                     </div> 
                 </div>
             </form>
-        </div>
+        </motion.div>
     </div>
   )
 }

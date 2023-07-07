@@ -34,6 +34,11 @@ h3 {
     font-size: 40px;
 }
 
+h4 {
+    font-size: 30px;
+    font-weight: 200;
+}
+
 p {
     font-size: 15px;
     letter-spacing: -.5px;
@@ -65,11 +70,19 @@ header {
     z-index: 30;
 }
 
+.exit-slide {
+    
+    background-color: var(--esther-details);
+    position: fixed;
+    z-index: 80;
+}
+
 .main-title {
     font-family: "Dialogist Personal Use", serif;
     text-transform: uppercase;
     margin-top: -20px;
-    overflow: hidden;    
+    overflow: hidden;
+    padding: 0 10px;    
 }
 
 .jasmine-fancy {

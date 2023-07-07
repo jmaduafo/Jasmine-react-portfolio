@@ -1,3 +1,18 @@
+.selected-projects-container {
+    overflow-x: scroll;
+    scroll-snap-stop: always;
+}
+
+.selected-projects-container::-webkit-scrollbar {
+    height: 3px;
+}
+
+.selected-projects {
+    display: flex;
+    width: 400%;
+    overflow: hidden;
+}
+
 .selected-contents {
     position: relative;
     width: 100vw;

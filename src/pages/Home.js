@@ -4,8 +4,9 @@ import HomeTransition from '../components/HomeTransition';
 import PortfolioCarousel from '../components/PortfolioCarousel';
 import HomeProjects from '../components/HomeProjects';
 import FooterIntro from '../components/FooterIntro';
+import ExitSlide from '../components/ExitSlide';
 import { Link } from "react-router-dom";
-import { motion, stagger, useScroll, useTransform } from 'framer-motion';
+import { motion, useScroll, useTransform } from 'framer-motion';
 
 const Home = () => {
   const spanArise = {
@@ -35,10 +36,10 @@ const Home = () => {
 
   const fade = useTransform(scrollYProgress, [0.6, 1], [1, .2]);
   const change = useTransform(scrollYProgress, [0.6, 1], [0, -100]);
-  const squeeze = useTransform(scrollYProgress, [0.6, 1], [1, 0.9])
 
   return (
     <>
+    <ExitSlide/>
     <div className='main-container'>
     <section>
       <motion.div className="home-hero" ref={homeTarget} style={{opacity: fade, translateY: change}}>

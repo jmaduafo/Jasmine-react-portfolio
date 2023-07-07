@@ -4,6 +4,11 @@
     margin: 7em 0 5em;
 }
 
+.pitch-text{
+    overflow: hidden;
+    padding-bottom: 15px;
+}
+
 .pitch-text h2 {
     line-height: .8em;
     font-weight: 500;

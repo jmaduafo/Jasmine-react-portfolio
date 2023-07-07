@@ -1,0 +1,83 @@
+.works-container {
+    margin-top: 10%;
+}
+
+.works-content {
+    width: 60%;
+    margin: 0 auto;
+    margin-bottom: 7em;
+    border-bottom: 1px solid var(--esther-text);
+}
+
+.works-top {
+    display: flex;
+    justify-content: space-between;
+    gap: 2em;
+}
+
+.work-roles-desc {
+    flex-basis: 35%;
+    display: flex;
+    flex-direction: column;
+}
+
+.work-image {
+    flex-basis: 65%;
+    height: 22em;
+    object-fit: cover;
+    overflow: hidden;
+}
+
+.works-date-roles {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 20px
+}
+
+.works-date-roles p {
+    font-size: 13px;
+    font-weight: 200;
+}
+
+.works-role p {
+    text-transform: capitalize;
+}
+
+.work-desc {
+    margin-top: auto; 
+}
+
+.work-desc p {
+    letter-spacing: -1px;
+}   
+
+.work-image img {
+    width: 100%;
+    height: 100%;
+}
+
+.works-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-top: 2em;
+    padding-bottom: 10px;
+}
+
+.work-count span {
+    font-size: 5em;
+    padding-right: 10px;
+}
+
+.work-title {
+    padding: 0 10px;
+    overflow: hidden;
+}
+
+.work-title h2 {
+    font-family: "Cormorant", serif;
+    font-weight: 300;
+    letter-spacing: -5px;
+    font-size: 6em;
+    font-style: italic;
+}

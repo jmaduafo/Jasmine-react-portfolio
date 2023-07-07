@@ -44,13 +44,21 @@
     width: 40%;
 }
 
+/* --------ABOUT DESCRIPTION SECTION-------- */
 .about-description {
-    margin: 20em 0 10em 0;
-    padding: 0 20%;
+    margin: 20em 0 10em;
+    width: 100%;
+    position: relative;
+    z-index: 10;
 }
 
 .about-desc-text {
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 6;
+    
 }
 .about-desc-text span {
     font-style: italic;
@@ -58,8 +66,61 @@
 }
 
 .about-desc-text h2 {
-    font-weight: 400;
+    font-weight: 300;
     letter-spacing: -4px;
     line-height: 75px;
     font-family: "Cormorant", serif;
+    width: 70%;
 }
+
+.about-images {
+    width: 300px;
+    height: 200px;
+    object-fit: cover;
+    position: absolute;
+    transform: translate(-50%, -50%);
+    filter: grayscale(70%) sepia(70%);
+    overflow: hidden;
+}
+
+.about-images img {
+    width: 100%;
+    height: 100%;
+}
+
+.music-image {
+    top: 20%;
+    left: 20%;
+}
+.anime-image {
+    top: 50%;
+    left: 70%;
+}
+.movies-image {
+    top: 80%;
+    left: 25%;
+}
+
+/* -------ABOUT ME SECTION------- */
+
+.about-me-section {
+    display: flex;
+    align-items: center;
+    gap: 7em;
+    padding: 10%; 
+}
+
+.about-me-text {
+    flex-basis: 60%;
+}
+
+.about-me-image {
+    flex-basis: 40%;
+    object-fit: cover;
+}
+
+.about-me-image img {
+    width: 100%;
+    height: 100%;
+}
+

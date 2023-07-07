@@ -23,7 +23,6 @@ function App() {
       
       <Header/>
       <SideBar/>
-      
       <main>
       <Routes>
         <Route exact path="/" Component={Home} />
